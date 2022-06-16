@@ -1,0 +1,23 @@
+.error404section {
+    margin: 175px 100px 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $primarycolor;
+    h1 {
+        font-size: 288px;
+        font-weight: 700;
+    }
+    h2 {
+        font-size: 36px;
+        font-weight: 500;
+        margin-bottom: 182px;
+    }
+    p {
+        font-size: 18px;
+        font-weight: 500;
+        color: $primarycolor;
+        text-decoration: underline;
+    }
+}

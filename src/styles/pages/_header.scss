@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px 100px 0 100px;
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 309px;
+        li {
+            font-size: 24px;
+            font-weight: 500;
+            color: $primarycolor;
+        }
+    }
+}
+
+.nav-active {
+    text-decoration: underline;
+    color: $primarycolor;
+}
