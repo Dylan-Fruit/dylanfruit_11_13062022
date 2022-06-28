@@ -15,7 +15,7 @@
         color: $secondarycolor;
         font-size: 24px;
         font-weight: 500;
-        @include mobile() {
+        @include tablet() {
             font-size: 12px;
         }
     }
