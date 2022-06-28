@@ -1,0 +1,59 @@
+.about {
+    &-bannercontainer{
+        margin: 0 100px 0 100px;
+    }
+    &-banner {
+        margin-top: 63px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 223px;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../assets/images/aboutbanner.jpg);
+        background-size: cover;
+        border-radius: 25px;
+    }
+    &-infos {
+        margin: 30px 209px 40px 209px;
+    }
+    &-accordion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 31px;
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $primarycolor;
+            width: 1023px;
+            height: 47px;
+            font-size: 24px;
+            font-weight: 500;
+            color: $secondarycolor;
+            cursor: pointer;
+            padding: 16px 32px;
+            border-radius: 5px;
+        }
+        img {
+            width: 14px;
+            height: 24px
+        }
+        .droplist {
+            background-color: $quaternarycolor;
+            width: 1023px;
+            position: relative;
+            z-index: -1;
+            padding: 36px 27px 19px 18px;
+            font-size: 24px;
+            font-weight: 500;
+            color: $primarycolor;
+            border-radius: 5px;
+            top: -13px;
+            &-closed {
+                display: none;
+            }
+        }
+    }
+}

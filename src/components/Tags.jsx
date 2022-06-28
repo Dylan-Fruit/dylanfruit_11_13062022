@@ -1,10 +1,8 @@
 import React from 'react';
 
-const Tags = () => {
+const Tags = ({ tags }) => {
     return (
-        <div>
-            
-        </div>
+        <div className='tags'>{tags}</div>
     );
 };
 
