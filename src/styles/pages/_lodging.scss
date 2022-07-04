@@ -4,15 +4,27 @@
         justify-content: space-between;
         margin: 0 100px;
         align-items: center;
+        @include tablet() {
+            flex-direction: column;
+            justify-content: flex-start;
+            margin: 0 20px;
+        }
     }
     &-maininfos {
         display: flex;
         flex-direction: column;
+        @include tablet() {
+            align-self: flex-start;
+            margin-bottom: 16.5px;
+        }
         h1 {
             font-size: 36px;
             font-weight: 500;
             display: flex;
             align-items: flex-end;
+            @include tablet() {
+                font-size: 18px;
+            }
         }
         p {
             font-size: 18px;
@@ -20,6 +32,9 @@
             display: flex;
             align-items: flex-end;
             margin-bottom: 20px;
+            @include tablet() {
+                font-size: 14px;
+            }
         }
         h1, p {
             color: $primarycolor;
@@ -37,11 +52,28 @@
             font-weight: 500;
             text-align: center;
             border-radius: 10px;
+            @include tablet() {
+                font-size: 10px;
+                border-radius: 5px;
+            }
         }
     }
     &-secondaryinfos {
+        @include tablet() {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
         .star { 
             margin-left: 10px;
+            cursor: pointer;
+            @include tablet() {
+                width: 15px;
+                height: 15px;
+                margin-left: 5px;
+            }
         }
     }
     &-hostinfos {
@@ -50,25 +82,41 @@
         justify-content: flex-end;
         gap: 10px;
         margin-bottom: 20px;
+        @include tablet() {
+            margin-bottom: 0;
+        }
         p {
             text-align: right;
             font-size: 18px;
             font-weight: 500;
             color: $primarycolor;
             width: 93px;
+            @include tablet() {
+                width: 73px;
+                font-size: 12px;
+            }
         }
     }
     &-hostprofile {
         width: 64px;
         height: 64px;
         border-radius: 50%;
+        @include tablet() {
+            width: 32px;
+            height: 32px;
+        }
     }
     &-detailedinfos {
         display: flex;
         justify-content: space-between;
+        @include tablet() {
+            flex-direction: column;
+        }
         .accordion {
-            width: 582px;
             margin: 24px 100px;
+            @include tablet() {
+                margin: 0 20px 20px 20px;
+            }
             .title {
                 background-color: $primarycolor;
                 color: $secondarycolor;
@@ -79,6 +127,16 @@
                 padding: 13px 20px;
                 font-size: 18px;
                 font-weight: 500;
+                cursor: pointer;
+                @include tablet() {
+                    font-size: 13px;
+                }
+                .arrows{ 
+                    @include tablet() {
+                        width: 9px;
+                        height: 15.2px;
+                    }
+                }
             }
             .droplist {
                 background-color: $quaternarycolor;
@@ -94,6 +152,10 @@
                 top: -13px;
                 display: flex;
                 flex-direction: column;
+                @include tablet() {
+                    font-size: 12px;
+                    height: 143px;
+                }
                 &-closed {
                     display: none;
                 }
@@ -105,23 +167,41 @@
 .carrousel {
     margin: 25px 100px 30px 100px;
     position: relative;
+    @include tablet() {
+        margin: 25px 20px 15px 20px;
+    }
     .showimages {
         width: 100%;
         height: 515px;
         border-radius: 25px;
         object-fit: cover;
+        @include tablet() {
+            height: 255px;
+        }
     }
     .arrowright {
+        cursor: pointer;
         position: absolute;
         top: 220px;
         right: 2%;
         height: 60px;
+        @include tablet() {
+            height: 20px;
+            width: 12px;
+            top: 120px;
+        }
     }
     .arrowleft {
+        cursor: pointer;
         position: absolute;
         top: 220px;
         left: 2%;
         height: 60px;
+        @include tablet() {
+            height: 20px;
+            width: 12px;
+            top: 120px;
+        }
     }
     &number {
         font-weight: 500;
@@ -131,5 +211,8 @@
         right: 49.11%;
         top: 89%;
         color: $secondarycolor;
+        @include tablet() {
+            display: none;
+        }
     }
 }

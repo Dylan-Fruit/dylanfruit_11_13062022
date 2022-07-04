@@ -5,7 +5,6 @@ import Cards from "../components/Cards";
 import { NavLink } from "react-router-dom";
 
 const Home = ({ data }) => {
-  console.log(data);
   return (
     <div>
       <Header />

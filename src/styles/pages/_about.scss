@@ -1,7 +1,7 @@
 .about {
     &-bannercontainer{
         margin: 0 100px 0 100px;
-        @include mobile() {
+        @include tablet() {
             margin: 0 20px;
         }
     }
@@ -21,31 +21,26 @@
     }
     &-infos {
         margin: 30px 209px 40px 209px;
-        @include mobile() {
-            margin: 20px 20px 150px 20px;
+        @include tablet() {
+            margin: 20px 20px 180px 20px;
         }
     }
     &-accordion {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         margin-bottom: 31px;
-        @include mobile() {
+        @include tablet() {
             margin-bottom: 20px;
         }
         .title {
+            background-color: $primarycolor;
+            color: $secondarycolor;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: $primarycolor;
-            height: 47px;
-            font-size: 24px;
+            border-radius: 10px;
+            padding: 13px 20px;
+            font-size: 18px;
             font-weight: 500;
-            color: $secondarycolor;
             cursor: pointer;
-            padding: 16px 32px;
-            border-radius: 5px;
             @include tablet() {
                 padding: 6px 12px;
                 font-size: 13px;
@@ -53,7 +48,7 @@
         }
         img {
             width: 14px;
-            height: 24px
+            height: 24px;
         }
         .droplist {
             background-color: $quaternarycolor;
@@ -65,7 +60,7 @@
             color: $primarycolor;
             border-radius: 5px;
             top: -13px;
-            @include mobile() {
+            @include tablet() {
                 font-size: 12px;
                 font-weight: 400;
             }
